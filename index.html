@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nu‑Bewegung · Stamm des Nordens · Souverän leben</title>
-    <meta name="description" content="Indigener Stamm in Schleswig-Holstein, Kreiskultur, Naturrecht und souveräne Identität. Mit Herzcircle, Rechtsarchitektur und der Verfassung freier Völker.">
+    <meta name="description" content="Nu-Bewegung & Stamm des Nordens, Indigener Stamm in Schleswig-Holstein, Kreiskultur, Naturrecht und souveräne Identität. Mit Herzcircle, Rechtsarchitektur und der Verfassung freier Völker.">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/ES-Logo-1000.png">
     <!-- Schriftarten & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,10 +18,9 @@
         body {
             font-family: 'Inter', sans-serif;
             background-color: #fefcf5;
-            background-image: radial-gradient(circle at 10% 20%, rgba(191,111,90,0.03) 0%, transparent 30%),
-                              radial-gradient(circle at 90% 70%, rgba(27,77,62,0.03) 0%, transparent 40%);
+            background-image: radial-gradient(circle at 10% 20%, rgba(191,111,90,0.03) 0%, transparent 30%);
             color: #1e2b2f;
-            line-height: 1.7;
+            line-height: 1.6;
             scroll-behavior: smooth;
         }
         :root {
@@ -37,37 +38,37 @@
             --border-radius-card: 30px 30px 30px 10px;
             --border-radius-btn: 40px;
         }
-        .container {
+          .container {
             width: 90%;
             max-width: 1200px;
             margin: 0 auto;
             padding: 3rem 0;
         }
-        h1, h2, h3 {
+        h1, h2, h3, h4 {
             font-weight: 600;
             line-height: 1.2;
-            letter-spacing: -0.02em;
             color: var(--dark);
+            letter-spacing: -0.02em;
         }
-        h1 { font-size: clamp(2.8rem, 8vw, 4rem); }
-        h2 {
-            font-size: clamp(2rem, 6vw, 2.8rem);
-            margin-bottom: 2rem;
+        h1 { font-size: clamp(2.8rem, 8vw, 3.8rem); }
+        h2 { 
+            font-size: clamp(2rem, 6vw, 2.6rem); 
+            margin-bottom: 1.5rem; 
             position: relative;
             display: inline-block;
         }
-        h2::after {
+        h2:after {
             content: '';
             position: absolute;
-            bottom: -10px;
+            bottom: -8px;
             left: 0;
-            width: 100px;
+            width: 80px;
             height: 4px;
             background: var(--accent);
             border-radius: 2px;
         }
-        h3 { font-size: 1.6rem; margin: 1rem 0 0.5rem; }
-        p { margin-bottom: 1.2rem; font-weight: 300; }
+        h3 { font-size: 1.5rem; margin: 1rem 0 0.5rem; }
+        p { margin-bottom: 1rem; font-weight: 300; }
         a { color: var(--primary); text-decoration: none; font-weight: 500; transition: color 0.3s; }
         a:hover { color: var(--accent); }
         .btn {
@@ -75,7 +76,7 @@
             background: var(--primary);
             color: white;
             padding: 0.8rem 2rem;
-            border-radius: var(--border-radius-btn);
+            border-radius: 40px;
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -100,13 +101,21 @@
             background: var(--primary);
             color: white;
         }
-        /* ---------- HEADER ---------- */
+      /* ----- EDELER HEADER (Glas-Effekt) ----- */
         header {
-            background: white;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
             position: sticky;
             top: 0;
             z-index: 100;
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03), 0 1px 4px rgba(0, 0, 0, 0.05);
+            border-bottom: 1px solid rgba(191, 111, 90, 0.2);
+            transition: all 0.3s ease;
+        }
+        header:hover {
+            background: rgba(255, 255, 255, 0.85);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05), 0 2px 8px rgba(0, 0, 0, 0.05);
         }
         nav {
             display: flex;
@@ -119,25 +128,96 @@
         .logo {
             display: flex;
             align-items: center;
-            gap: 1rem;
+            gap: 0.8rem;
         }
         .logo img {
-            height: 60px;
+            height: 50px;
             width: auto;
+            border-radius: 50%;
+            transition: transform 0.3s;
         }
-        .logo span {
+        .logo img:hover {
+            transform: scale(1.05);
+        }
+        .logo-text {
             font-size: 1.8rem;
             font-weight: 700;
-            color: var(--primary);
-            letter-spacing: -0.5px;
+            letter-spacing: -0.02em;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 2px 5px rgba(191, 111, 90, 0.2);
+            line-height: 1;
         }
-        .nav-links { display: flex; gap: 2rem; align-items: center; flex-wrap: wrap; }
-        .nav-links a { font-weight: 500; }
-        .menu-icon { display: none; font-size: 1.8rem; cursor: pointer; }
-
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        .nav-links a {
+            font-weight: 500;
+            font-size: 1.1rem;
+            color: var(--dark);
+            padding: 0.5rem 0;
+            position: relative;
+            transition: color 0.3s;
+            text-decoration: none;
+            letter-spacing: 0.3px;
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%) scaleX(0);
+            width: 80%;
+            height: 2px;
+            background: var(--accent);
+            border-radius: 2px;
+            transition: transform 0.3s ease;
+            transform-origin: center;
+        }
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            transform: translateX(-50%) scaleX(1);
+        }
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--primary);
+        }
+        .menu-icon {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 22px;
+            cursor: pointer;
+            z-index: 200;
+        }
+        .menu-icon span {
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: var(--primary);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+        .menu-icon.active span:nth-child(1) {
+            transform: translateY(9px) rotate(45deg);
+            background: var(--accent);
+        }
+        .menu-icon.active span:nth-child(2) {
+            opacity: 0;
+            transform: scale(0);
+        }
+        .menu-icon.active span:nth-child(3) {
+            transform: translateY(-9px) rotate(-45deg);
+            background: var(--accent);
+        }
         /* ---------- HERO ---------- */
         .hero {
-            background: linear-gradient(135deg, rgba(27,77,62,0.9), rgba(93,78,109,0.9)), url('https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover;
+            background: linear-gradient(135deg, rgba(27,77,62,0.9), rgba(93,78,109,0.9)), url('images/sut.jpg') center/cover;
             color: white;
             text-align: center;
             padding: 5rem 1rem;
@@ -154,17 +234,18 @@
             border: 1px solid rgba(255,255,255,0.3);
         }
 
-        /* ---------- HEARTCIRCLE-BANNER ---------- */
+       /* Heartcircle-Banner */
         .heartcircle-banner {
             background: var(--gold);
             color: var(--dark);
             text-align: center;
             padding: 2rem;
-            border-radius: 60px;
+            border-radius: 40px;
             margin: 2rem auto;
             max-width: 900px;
             box-shadow: var(--shadow-hover);
         }
+        .heartcircle-banner i { margin: 0 0.5rem; color: var(--accent); }
         .heartcircle-dates {
             display: flex;
             gap: 2rem;
@@ -180,21 +261,25 @@
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
 
-        /* ---------- SEKTIONEN ---------- */
+         /* Sektionen */
         .section { padding: 4rem 0; border-bottom: 1px solid rgba(0,0,0,0.05); }
         .section-light { background: white; }
         .section-dark { background: var(--light); }
-        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            align-items: start;
+        }
         .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
-        .grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; }
 
+        /* Karten */
         .card {
             background: white;
-            border-radius: var(--border-radius-card);
+            border-radius: 24px;
             padding: 2rem;
             box-shadow: var(--shadow);
             transition: transform 0.3s, box-shadow 0.3s;
-            height: 100%;
         }
         .card:hover {
             transform: translateY(-6px);
@@ -202,51 +287,94 @@
         }
         .icon-large { font-size: 2.5rem; color: var(--primary); margin-bottom: 1rem; }
 
+  /* Bücher */
+        .book-card {
+            background: white;
+            border-radius: 24px;
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .book-cover {
+            max-width: 150px;
+            height: auto;
+            margin-bottom: 1rem;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .book-card h4 { margin-top: 0.5rem; }
+        .book-card .btn { margin: 0.3rem; }
+
+        /* Buch-Kapitel (grid-3) */
+        #buch-kapitel .card {
+            cursor: pointer;
+            text-align: center;
+            padding: 1.5rem;
+        }
+        #buch-kapitel .card:hover {
+            background: var(--light);
+        }
+
+        .quote {
+            font-style: italic;
+            font-size: 1.2rem;
+            background: rgba(27,77,62,0.05);
+            padding: 2rem;
+            border-radius: 24px;
+            border-left: 5px solid var(--accent);
+            margin: 2rem 0;
+            font-family: 'Source Serif 4', serif;
+        }
+
         /* Galerie */
         .gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
         }
         .gallery-item {
-            border-radius: 30px;
             overflow: hidden;
+            border-radius: 20px;
+            cursor: pointer;
             box-shadow: var(--shadow);
-            transition: transform 0.3s;
-            aspect-ratio: 4/3;
         }
         .gallery-item img {
             width: 100%;
-            height: 100%;
+            height: 200px;
             object-fit: cover;
-            display: block;
             transition: transform 0.5s;
         }
-        .gallery-item:hover img {
+        .gallery-item img:hover {
             transform: scale(1.05);
         }
 
-        /* Bücher */
-        .book-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1.5rem;
-            justify-content: center;
-            margin: 2rem 0;
-        }
-        .book-link {
+        /* Crowdfunding-Box */
+        .crowdfunding-box {
             background: white;
-            padding: 1rem 2rem;
-            border-radius: 60px;
+            border-radius: 32px;
+            padding: 2rem;
+            margin: 2rem 0;
             box-shadow: var(--shadow);
-            transition: all 0.3s;
-            font-weight: 600;
         }
-        .book-link:hover {
-            background: var(--primary);
-            color: white;
-            transform: scale(1.05);
+        .crowdfunding-box ul {
+            columns: 2;
+            column-gap: 2rem;
+            list-style: none;
+            margin: 1rem 0;
+        }
+        .crowdfunding-box li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        .crowdfunding-box li:before {
+            content: "🌱";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
         }
 
         /* Verfassung (kurz) */
@@ -303,8 +431,7 @@
             max-height: 1200px;
             padding: 2rem;
         }
-
-        /* Modal (Impressum/Datenschutz) */
+  /* Modal */
         .modal {
             display: none;
             position: fixed;
@@ -317,10 +444,10 @@
         }
         .modal-content {
             background: white;
-            max-width: 500px;
+            max-width: 600px;
             width: 90%;
             padding: 2rem;
-            border-radius: 40px;
+            border-radius: 32px;
             box-shadow: 0 20px 40px rgba(0,0,0,0.3);
             position: relative;
             max-height: 80vh;
@@ -332,7 +459,36 @@
             font-size: 2rem;
             cursor: pointer;
             color: var(--primary);
+            transition: color 0.3s;
         }
+        .close-modal:hover { color: var(--accent); }
+
+        /* Lightbox */
+        #lightbox {
+            background: rgba(0,0,0,0.9);
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+        #lightbox img {
+            max-width: 90%;
+            max-height: 80vh;
+            border-radius: 20px;
+            box-shadow: 0 0 30px rgba(255,255,255,0.2);
+        }
+        .lightbox-prev, .lightbox-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-size: 3rem;
+            cursor: pointer;
+            padding: 1rem;
+            user-select: none;
+        }
+        .lightbox-prev { left: 20px; }
+        .lightbox-next { right: 20px; }
+        .lightbox-prev:hover, .lightbox-next:hover { color: var(--accent); }
 
         /* Footer */
         footer {
@@ -352,18 +508,45 @@
         .footer-symbols a {
             color: white;
             transition: color 0.3s, transform 0.3s;
+            display: inline-block;
         }
         .footer-symbols a:hover {
             color: var(--accent);
             transform: translateY(-4px);
         }
+        .footer-links a { margin: 0 1rem; }
 
         /* Responsive */
         @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .menu-icon { display: block; }
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 2rem; }
+            .nav-links {
+                display: flex;
+                flex-direction: column;
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 280px;
+                height: 100vh;
+                background: rgba(255, 255, 255, 0.95);
+                backdrop-filter: blur(12px);
+                padding: 6rem 2rem 2rem;
+                gap: 2rem;
+                transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                box-shadow: -5px 0 30px rgba(0, 0, 0, 0.1);
+                z-index: 150;
+            }
+            .nav-links.show { right: 0; }
+            .nav-links a { font-size: 1.3rem; width: 100%; text-align: center; }
+            .menu-icon { display: flex; }
             .grid-2 { grid-template-columns: 1fr; }
             .hero-badges { flex-direction: column; align-items: center; }
+            .heartcircle-dates { flex-direction: column; gap: 0.5rem; }
+            .crowdfunding-box ul { columns: 1; }
+        }
+        @media (max-width: 480px) {
+            .logo-text { font-size: 1.4rem; }
+            .logo img { height: 40px; }
         }
     </style>
 </head>
@@ -372,22 +555,23 @@
         <nav>
             <div class="logo">
                 <img src="images/ES-Logo-1000.png" alt="ES Logo" onerror="this.style.display='none'">
-                <span>NU · Stamm des Nordens</span>
+                <span class="logo-text">NU · Stamm des Nordens</span>
             </div>
             <div class="nav-links">
-                <a href="#home">Start</a>
+                <a href="#home" class="active">Heartcircle</a>
                 <a href="#nu-bewegung">Nu‑Bewegung</a>
                 <a href="#stamm">Stamm</a>
-                <a href="#heartcircle">Heartcircle</a>
                 <a href="#ueberfall">Überfall</a>
                 <a href="#dokumente">Rechtsdokumente</a>
-                <a href="#buch">Buch</a>
-                <a href="#verfassung">Verfassung</a>
+                <a href="#schriften">Schriften</a>
                 <a href="#galerie">Galerie</a>
-                <a href="#buecher">Bücher</a>
                 <a href="#kontakt">Kontakt</a>
             </div>
-            <div class="menu-icon"><i class="fas fa-bars"></i></div>
+            <div class="menu-icon" id="menuIcon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
     </header>
 
@@ -405,28 +589,30 @@
             </div>
         </section>
 
-        <!-- HEARTCIRCLE HERVORHEBUNG (beispielhaft mit festen Terminen) -->
+       <!-- HEARTCIRCLE -->
         <div class="container">
             <div class="heartcircle-banner">
-                <i class="fas fa-circle"></i> HERZCIRCLE – NÄCHSTE TERMINE <i class="fas fa-circle"></i>
+                <i class="fas fa-circle"></i> HERZCIRCLE – JETZT! <i class="fas fa-circle"></i>
                 <div class="heartcircle-dates">
-                    <span class="date-card">jeden 1. & 3. Donnerstag 18:00</span>
-                    <span class="date-card">17./18. Februar 2026 (historisch)</span>
+                    <span class="date-card">17. Februar 18:00</span>
+                    <span class="date-card">18. Februar 18:00</span>
+                    <span class="date-card">weitere Termine folgen!</span>
                 </div>
-                <p style="font-size:1.3rem;"><i class="fas fa-map-marker-alt"></i> <strong>Meiereistraße 5, 24960 Munkbrarup (Rüde)</strong></p>
+                <p><i class="fas fa-map-marker-alt"></i> <strong>Meiereistraße 5, 24960 Munkbrarup (Rüde)</strong></p>
                 <p>Alle Menschen guten Willens sind willkommen – wir sprechen im Kreis von Herz zu Herz.</p>
-                <a href="#kontakt" class="btn btn-outline" style="margin-top:1rem;">Teilnahme anfragen</a>
+                <a href="#kontakt" class="btn btn-outline">Anfragen & Unterstützung</a>
             </div>
         </div>
 
         <!-- NU‑BEWEGUNG -->
-        <section id="nu-bewegung" class="section section-light">
+        <section id="nu-bewegung" class="section section-dark">
             <div class="container">
                 <h2>Die Nu‑Bewegung</h2>
                 <div class="grid-2">
                     <div>
-                        <p class="lead" style="font-size:1.2rem;"><strong>Nu</strong> bedeutet „im Augenblick“ – die Einladung, aus dem Herzen zu leben, jenseits alter Strukturen. Gegründet von <strong>Hauke</strong>, ist Nu der Mutterschoß, aus dem der Stamm des Nordens erwachsen ist.</p>
-                        <p>Unsere Aufgabe sehen wir darin, die <strong>Stämme wieder zu reaktivieren</strong> – Menschen zu ermutigen, in Kreiskultur, Naturverbundenheit und souveräner Selbstbestimmung zu leben. Nu ist die Bewegung, der Stamm des Nordens ist ein konkreter Ausdruck dieser Vision.</p>
+                        <p class="lead" style="font-size:1.2rem;"><strong>Nu</strong> bedeutet „im Augenblick“ – die Einladung, aus dem Herzen zu leben, jenseits alter Strukturen. Gegründet von <strong>Hauke</strong>, ist die <strong>Nu-Bewegung</strong> der Mutterschoß, aus dem der <strong>Stamm des Nordens</strong> erwachsen ist.</p>
+                        <p class="lead" style="font-size:1.2rem;"> Unsere Aufgabe sehen wir darin, die <strong>Stämme wieder zu reaktivieren</strong> – Menschen zu ermutigen, in Kreiskultur, Naturverbundenheit und souveräner Selbstbestimmung zu leben.</p>
+                        <p class="lead" style="font-size:1.2rem;"> <strong>Nu</strong> ist die Bewegung, der <strong>Stamm des Nordens</strong> ist ein konkreter Ausdruck dieser Vision.</p>
                     </div>
                     <div>
                         <div class="card">
@@ -445,29 +631,35 @@
         </section>
 
         <!-- STAMM DES NORDENS -->
-        <section id="stamm" class="section section-dark">
+    <section id="stamm" class="section section-light">
             <div class="container">
                 <h2>Stamm des Nordens</h2>
                 <div class="grid-2">
                     <div>
-                        <p>Der Stamm des Nordens ist eine Gemeinschaft von Menschen, die sich als Teil der Natur fühlen und in Kreiskultur leben. Unsere Identität bestimmen wir selbst – als <strong>indigenes Volk</strong> im Sinne der UN‑Erklärung (UNDRIP).</p>
+                        <p><strong>Der Stamm des Nordens</strong> ist eine Gemeinschaft von Menschen, die sich als Teil der Natur fühlen, füreinander sorgen und ihr Leben in <strong>Kreiskultur</strong> gestalten. Wir sind keine Organisation, kein Verein – wir sind ein lebendiger Organismus, verwurzelt im Land zwischen den Meeren.</p>
+                        <p>Unsere Identität bestimmen wir selbst: als <strong>indigenes Volk</strong> im Sinne der UN-Erklärung (UNDRIP). Jeder Mensch, der sich zugehörig fühlt, gehört dazu – ohne Liste, ohne Papier.</p>
+                        
                         <ul style="list-style:none;">
                             <li><i class="fas fa-heart" style="color:var(--accent);"></i> Achtsamkeit vor sich selbst und der Schöpfung</li>
                             <li><i class="fas fa-circle" style="color:var(--primary);"></i> Kreis statt Hierarchie</li>
                             <li><i class="fas fa-leaf" style="color:var(--secondary);"></i> Landverbundenheit – 2 Hektar pro Sippe</li>
                             <li><i class="fas fa-dove" style="color:var(--gold);"></i> Gewaltfreier Widerstand & Diplomatie</li>
                         </ul>
-                        <p><strong>Generalanwalt:</strong> <strong>stefanie s o h s t</strong> – er vertritt den Stamm im diplomatischen Austausch mit Staaten.</p>
+                         <p><p><strong>Generalanwalt</strong><p> <strong>stefan s o h s t</strong><p> vertritt den Stamm im diplomatischen Austausch mit Staaten.</p>
                     </div>
                     <div class="quote" style="background: rgba(27,77,62,0.05); padding:2rem; border-radius:30px; border-left:5px solid var(--gold);">
-                        <i class="fas fa-quote-left" style="color:var(--accent);"></i> „Der Stamm ist Teil der Natur und ihrer Zyklen, er kann sich nicht an künstliche Gesetze halten. Unser Weg ist das Einverständnis mit allen lebenden Wesen.“
+                        
+<p>Wir leben im <strong>natürlichen Rechtskreis</strong>: Keine Unterschriften, keine fremden Gesetze, sondern offene Herzen und klare Worte im Kreis. Unser Weg ist Frieden, unsere Sprache ist Zuhören.</p>
+<p>Unser Stammesgebiet ist das Land, auf dem wir inkarniert sind. Wir pflegen es, statt es zu besitzen. 2 Hektar pro Sippe – für Nahrung, Wasser, Wald.</p>
+<p><strong>„Der Stamm ist Teil der Natur und ihrer Zyklen, er kann sich nicht an künstliche Gesetze halten. Unser Weg ist das Einverständnis mit allen lebenden Wesen.“</p>
+
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- ÜBERFALL 11. FEBRUAR -->
-        <section id="ueberfall" class="section section-light">
+        <section id="ueberfall" class="section section-dark">
             <div class="container">
                 <h2>Der Überfall am 11. Hornung</h2>
                 <p>Am 11. Februar 2026 drangen neun bewaffnete Menschen mit „POLIZEI“-Westen in unsere Residenz in Rüde ein. Unser Generalanwalt <strong>stefanie s o h s t</strong> wurde überwältigt, gefesselt, stundenlang festgehalten und zur Zahlung von 100 € gezwungen. Zwei Zeremonialmesser und die Kennzeichen unseres Fahrzeugs (NU‑ES 108) wurden geraubt.</p>
@@ -492,10 +684,10 @@
         </section>
 
         <!-- RECHTLICHE GRUNDLAGEN – DIE SECHS DOKUMENTE (allgemeingültig) -->
-        <section id="dokumente" class="section section-dark">
+        <section id="dokumente" class="section section-light">
             <div class="container">
                 <h2>Souveränitäts‑Architektur</h2>
-                <p class="lead">In sechs Dokumenten haben wir eine umfassende Rechts- und Identitätsstruktur geschaffen – Grundlage für ein Leben in selbstbestimmter Souveränität. Die Prinzipien können von jeder souveränen Person adaptiert werden.</p>
+                <p class="lead">In sechs Dokumenten erforschen wir eine umfassende Rechts- und Identitätsstruktur als Grundlage für ein Leben in selbstbestimmter Souveränität. <p> Die Prinzipien können von jedem souveränen Wesen adaptiert werden.</p>
                 <!-- Akkordeon für die sechs Dokumente -->
                 <div style="margin-top:2rem;">
                     <div class="accordion" id="doc1">
@@ -504,12 +696,12 @@
                             <i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="accordion-content">
-                            <h4>Sechs souveräne Ebenen</h4>
-                            <p><strong>Die Meldeperson</strong> – alltägliche Interaktionen (Gemeinrecht)<br>
-                            <strong>Die Pass‑Person</strong> – kollaterale Identität (Kollateralrecht)<br>
-                            <strong>Der Schamane / die Schamanin</strong> – spirituelle Führung (Naturrecht)<br>
-                            <strong>Das wirtschaftliche Institut</strong> – Handel & Verträge (Handelsrecht)<br>
-                            <strong>Die königliche Würde</strong> – souveräne Proklamationen (historisches Königrecht)<br>
+                            <h4>Sechs souveräne Ebenen</h4><p>
+                            <p><strong>Die Meldeperson</strong> – alltägliche Interaktionen (Gemeinrecht)<br><p>
+                            <strong>Die Pass‑Person</strong> – kollaterale Identität (Kollateralrecht)<br><p>
+                            <strong>Der Schamane / die Schamanin</strong> – spirituelle Führung (Naturrecht)<br><p>
+                            <strong>Das wirtschaftliche Institut</strong> – Handel & Verträge (Handelsrecht)<br><p>
+                            <strong>Die königliche Würde</strong> – souveräne Proklamationen (historisches Königrecht)<br><p>
                             <strong>Die kosmische Uridentität</strong> – Verbindung zum Einen (göttliches Recht)</p>
                             <p><a href="#" class="btn btn-outline">PDF (Muster) herunterladen</a></p>
                         </div>
@@ -520,7 +712,14 @@
                             <i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="accordion-content">
-                            <p>Jede Ebene agiert in einem spezifischen Rechtsraum: Naturrecht, göttliches Recht, Handelsrecht, Kollateralrecht, Gemeinrecht, historisches Königrecht. Überschneidungen werden durch das Harmonisierungs-Protokoll gelöst.</p>
+                            <p>Jede Ebene agiert in einem spezifischen Rechtsraum:<p>
+                                Naturrecht<p>
+                                göttliches Recht<p>
+                                Handelsrecht<p>
+                                Kollateralrecht<p> 
+                                Gemeinrecht<p>
+                                historisches Königrecht<p> 
+                                Überschneidungen werden durch das Harmonisierungs-Protokoll gelöst.</p>
                             <p><a href="#" class="btn btn-outline">PDF (Muster) herunterladen</a></p>
                         </div>
                     </div>
@@ -530,7 +729,15 @@
                             <i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="accordion-content">
-                            <p>Konfliktlösung zwischen Identitäten und Rechtsräumen. Fünf Schritte: Erkennen, Innehalten, Analyse, Lösung, Umsetzung. Methoden: höhere Perspektive, goldener Schnitt, Mediation.</p>
+                            <p>Konfliktlösung zwischen Identitäten und Rechtsräumen.<p> 
+                                 Fünf Schritte:<p> 
+                                 Erkennen,<p> 
+                                 Innehalten,<p> 
+                                 Analyse,<p> 
+                                 Lösung,<p> 
+                                 Umsetzung.<p> 
+                                 Methoden:<p> 
+                                 höhere Perspektive, goldener Schnitt, Mediation.</p>
                             <p><a href="#" class="btn btn-outline">PDF (Muster) herunterladen</a></p>
                         </div>
                     </div>
@@ -550,7 +757,10 @@
                             <i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="accordion-content">
-                            <p>Seerechtliche Analogie: Wie Treibgut wird die Pass‑Person von ihrer lebenden Seele zurückgefordert. Eine biologische Probe (z.B. Haar) belegt die Verbindung. Der Reisepass bleibt unverändert gültig.</p>
+                            <p>Seerechtliche Analogie:<p> 
+                               Wie Treibgut wird die Pass‑Person von ihrer lebenden Seele zurückgefordert.<p> 
+                               Eine biologische Probe (z.B. Haar) belegt die Verbindung.<p> 
+                               Der Reisepass bleibt unverändert gültig.</p>
                             <p><a href="#" class="btn btn-outline">PDF (Muster) herunterladen</a></p>
                         </div>
                     </div>
@@ -560,30 +770,72 @@
                             <i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="accordion-content">
-                            <p>Wirtschaftliche Entität für Systemoptimierung, Lebensfreude und spirituelle Technologien. Satzung, Geschäftsbereiche, Ethik-Kodex.</p>
+                            <p>Wirtschaftliche Entität.<p> 
+                               Satzung, Geschäftsbereiche, Ethik-Kodex.</p>
                             <p><a href="#" class="btn btn-outline">PDF (Muster) herunterladen</a></p>
+                        </div>
+                    </div>
+<div class="accordion" id="doc6">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <span>📜 7. Praktischer Leitfaden</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p>Dieser Leitfaden verbindet alle bisherigen Dokumente zu einem harmonischen
+                               Gesamtsystem für den Alltag.<p> 
+                               Er bietet konkrete Handlungsanweisungen, Mustervorlagen
+                               und praktische Werkzeuge für die tägliche Anwendung</p>
+                            <p><a href="#" class="btn btn-outline">PDF herunterladen</a></p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
+  <!-- BÜCHER & SCHRIFTEN -->
+        <section id="schriften" class="section section-dark">
+            <div class="container">
+                <h2>Bücher & Schriften</h2>
+                <p>Aus dem Herzen unserer Bewegung.</p>
+
+                <!-- Bücher vom Stamm des Nordens (Steffi) -->
+                <h3 style="margin-top:3rem;">📚 Bücher vom Stamm des Nordens</h3>
+                <div class="grid-2">
+                    <div class="book-card">
+                        <img src="images/cover-eiswall.jpg" alt="Cover Der Eiswall" class="book-cover" onerror="this.style.display='none'">
+                        <h4>Der Eiswall</h4>
+                        <p class="book-description">Gedanken über die Grenzen der alten Welt und den Weg in die Freiheit.</p>
+                        <a href="https://www.amazon.de/dp/B0CNW9V1VR" target="_blank" class="btn btn-outline">Amazon</a>
+                        <button class="btn btn-outline leseprobe-btn" data-modal="modal-leseprobe-eiswall">Leseprobe</button>
+                        <a href="#" onclick="openModal('iaModal'); return false;" class="btn btn-outline"><i class="fas fa-download"></i> PDF</a>
+                    </div>
+                    <div class="book-card">
+                        <img src="images/cover-verfassung.jpg" alt="Cover Verfassung freier Völker" class="book-cover" onerror="this.style.display='none'">
+                        <h4>Verfassung freier Völker</h4>
+                        <p class="book-description">Entwurf einer Verfassung aus dem Herzen der Natur.</p>
+                        <a href="https://www.amazon.de/dp/B0DNB4NSPS" target="_blank" class="btn btn-outline">Amazon</a>
+                        <button class="btn btn-outline leseprobe-btn" data-modal="modal-leseprobe-verfassung">Leseprobe</button>
+                        <a href="pdf/verfassung-freier-voelker.pdf" download class="btn btn-outline"><i class="fas fa-download"></i> PDF</a>
+                    </div>
+                </div>
+        </section>
+
         <!-- BUCH DES EINEN BAUMES (kurze Darstellung) -->
-        <section id="buch" class="section section-light">
+        <section id="schrift" class="section section-light">
             <div class="container">
                 <h2>Das Buch des Einen Baumes</h2>
                 <p>Eine zeitlose Lehre über die Grundrechte der Seele, die Kreiskultur und die Rückkehr zur Souveränität. In neun Kapiteln entfaltet sich die Essenz unserer Philosophie.</p>
                 <div class="grid-3">
-                    <div class="card"><i class="fas fa-tree icon-large"></i><h3>I. Die Quelle</h3><p>Das Naturrecht als Fundament allen Seins.</p></div>
-                    <div class="card"><i class="fas fa-circle-notch icon-large"></i><h3>II. Der Kreis</h3><p>Die Urform der Versammlung.</p></div>
-                    <div class="card"><i class="fas fa-dagger icon-large"></i><h3>III. Die Wunden</h3><p>Die neun Schwerter der alten Welt.</p></div>
-                    <div class="card"><i class="fas fa-heart icon-large"></i><h3>IV. Die Fülle</h3><p>Die zehn Kelche des Herzens.</p></div>
-                    <div class="card"><i class="fas fa-fire icon-large"></i><h3>V. Der Funke</h3><p>Die Prinzessin des Feuers.</p></div>
-                    <div class="card"><i class="fas fa-dragon icon-large"></i><h3>VI. Verwandlung</h3><p>Tod und Wiedergeburt.</p></div>
-                    <div class="card"><i class="fas fa-yin-yang icon-large"></i><h3>VII. Zwei Wege</h3><p>Kriegerin und Alchemist.</p></div>
-                    <div class="card"><i class="fas fa-crown icon-large"></i><h3>VIII. Zwölf Rechte</h3><p>Die Grundrechte der Seele.</p></div>
-                    <div class="card"><i class="fas fa-tree icon-large"></i><h3>IX. Rückkehr</h3><p>Zum Einen Baum.</p></div>
-                </div>
+                    <div class="card" onclick="openModal('modal-kap1')"><i class="fas fa-tree icon-large"></i><h5>I. Die Quelle</h5><p>Das Naturrecht als Fundament.</p></div>
+                        <div class="card" onclick="openModal('modal-kap2')"><i class="fas fa-circle-notch icon-large"></i><h5>II. Der Kreis</h5><p>Urform der Versammlung.</p></div>
+                        <div class="card" onclick="openModal('modal-kap3')"><i class="fas fa-dagger icon-large"></i><h5>III. Die Wunden</h5><p>Die neun Schwerter.</p></div>
+                        <div class="card" onclick="openModal('modal-kap4')"><i class="fas fa-heart icon-large"></i><h5>IV. Die Fülle</h5><p>Die zehn Kelche.</p></div>
+                        <div class="card" onclick="openModal('modal-kap5')"><i class="fas fa-fire icon-large"></i><h5>V. Der Funke</h5><p>Prinzessin des Feuers.</p></div>
+                        <div class="card" onclick="openModal('modal-kap6')"><i class="fas fa-dragon icon-large"></i><h5>VI. Verwandlung</h5><p>Tod & Wiedergeburt.</p></div>
+                        <div class="card" onclick="openModal('modal-kap7')"><i class="fas fa-yin-yang icon-large"></i><h5>VII. Zwei Wege</h5><p>Kriegerin & Alchemist.</p></div>
+                        <div class="card" onclick="openModal('modal-kap8')"><i class="fas fa-crown icon-large"></i><h5>VIII. Zwölf Rechte</h5><p>Grundrechte der Seele.</p></div>
+                        <div class="card" onclick="openModal('modal-kap9')"><i class="fas fa-tree icon-large"></i><h5>IX. Rückkehr</h5><p>Zum Einen Baum.</p></div>
+                    </div>
                 <p class="text-center" style="margin-top:2rem;"><a href="#" class="btn">Als PDF lesen</a></p>
             </div>
         </section>
@@ -612,64 +864,427 @@
             </div>
         </section>
 
-        <!-- GALERIE -->
+         <!-- GALERIE -->
         <section id="galerie" class="section section-light">
             <div class="container">
-                <h2>Bilder aus dem Stamm</h2>
-                <div class="gallery">
-                    <div class="gallery-item"><img src="images/nu1.jpg" alt="Nu Bewegung" onerror="this.src='https://via.placeholder.com/400x300?text=nu1'"></div>
-                    <div class="gallery-item"><img src="images/nu2.jpg" alt="Nu Bewegung" onerror="this.src='https://via.placeholder.com/400x300?text=nu2'"></div>
-                    <div class="gallery-item"><img src="images/nu3.jpg" alt="Nu Bewegung" onerror="this.src='https://via.placeholder.com/400x300?text=nu3'"></div>
-                    <div class="gallery-item"><img src="images/tipi2.jpg" alt="Tipi" onerror="this.src='https://via.placeholder.com/400x300?text=tipi2'"></div>
-                    <div class="gallery-item"><img src="images/tipi.jpg" alt="Tipi" onerror="this.src='https://via.placeholder.com/400x300?text=tipi'"></div>
+                <h2>Galerie</h2>
+                <div class="gallery" id="gallery">
+                    <div class="gallery-item"><img src="images/nu1.jpg" alt="Nu Bewegung" onclick="openLightbox(0)"></div>
+                    <div class="gallery-item"><img src="images/nu2.jpg" alt="Nu Bewegung" onclick="openLightbox(1)"></div>
+                    <div class="gallery-item"><img src="images/nu3.jpg" alt="Nu Bewegung" onclick="openLightbox(2)"></div>
+                    <div class="gallery-item"><img src="images/tipi2.jpg" alt="Tipi" onclick="openLightbox(3)"></div>
+                    <div class="gallery-item"><img src="images/tipi.jpg" alt="Tipi" onclick="openLightbox(4)"></div>
                 </div>
             </div>
         </section>
 
-        <!-- BÜCHER VON STEFFI -->
-        <section id="buecher" class="section section-dark">
+        <!-- KONTAKT + CROWDFUNDING -->
+        <section id="kontakt" class="section section-dark">
             <div class="container">
-                <h2>Bücher von stefanie s o h s t</h2>
-                <p>Der Generalanwalt des Stammes teilt seine Gedanken in diesen Werken:</p>
-                <div class="book-links">
-                    <a href="https://www.amazon.de/dp/B0CNW9V1VR" target="_blank" class="book-link">📘 Der Eiswall</a>
-                    <a href="https://www.amazon.de/dp/B0CNWFJL3B" target="_blank" class="book-link">📗 Schöpfungswächter</a>
-                    <a href="https://www.amazon.de/dp/B0DNB4NSPS" target="_blank" class="book-link">📙 Der Pfad des Herzens</a>
-                </div>
-                <p style="margin-top:1rem;">(Alle Bücher sind bei Amazon erhältlich.)</p>
-            </div>
-        </section>
-
-        <!-- KONTAKT -->
-        <section id="kontakt" class="section section-light">
-            <div class="container text-center">
                 <h2>Kontakt & Mitwirkung</h2>
-                <p>Du fühlst dich verbunden? Komm in den Heartcircle, schreib uns über Telegram oder besuche uns vor Ort.</p>
-                <div style="margin:2rem 0;">
-                    <p><i class="fab fa-telegram-plane" style="font-size:2rem; color:var(--primary);"></i> <a href="https://t.me/einfachsein_kanal" target="_blank" style="font-size:1.2rem;">t.me/einfachsein_kanal</a></p>
-                    <p><i class="fas fa-envelope" style="color:var(--primary);"></i> <a href="mailto:stefanie@stammdesnordens.org">stefanie@stammdesnordens.org</a></p>
+                <div style="text-align:center;">
+                    <p><i class="fab fa-telegram-plane" style="font-size:2rem; color:var(--primary);"></i> <a href="https://t.me/einfachsein_kanal" target="_blank">@einfachsein_kanal</a></p>
+                    <p><i class="fas fa-envelope" style="color:var(--primary);"></i> <a href="mailto:wirsindnu@protonmail.com">wirsindnu@protonmail.com</a></p>
                 </div>
-                <div class="grid-3">
-                    <div class="card">
-                        <i class="fas fa-feather-alt icon-large"></i>
-                        <h3>Heartcircle</h3>
-                        <p>Regelmäßig in Munkbrarup – schreib uns für Termine.</p>
-                    </div>
-                    <div class="card">
-                        <i class="fas fa-hand-holding-heart icon-large"></i>
-                        <h3>Unterstützen</h3>
-                        <p>Mit Zeit, Fähigkeiten, Material – oder einer Spende für unser Fahrzeug (NU‑ES 108).</p>
-                    </div>
-                    <div class="card">
-                        <i class="fas fa-globe-europe icon-large"></i>
-                        <h3>Vernetzung</h3>
-                        <p>Wir suchen den Austausch mit anderen Stämmen und indigenen Gruppen weltweit.</p>
-                    </div>
+
+                <!-- Crowdfunding (Inhalt aus deiner Fassung) -->
+                <div class="crowdfunding-box">
+                    <h3 style="color:var(--gold); text-align:center;">🌱 Jetzt den Stamm des Nordens unterstützen</h3>
+                    <p>Im Sommer letzten Jahres haben wir uns als Stamm des Nordens zusammengefunden. Wir sind Menschen, die sich als Teil der Natur fühlen, für einander sorgen und in Kreiskultur (angelehnt an Circleways nach Manitonquat) unser Leben gestalten.</p>
+                    <h4>Was braucht ein Stamm?</h4>
+                    <p>Ein Stamm braucht als erstes Menschen, die einander zuhören, sich bereitwillig einander widmen und Freude daran haben, der Erde die Nahrung zu entlocken und sie einander und unseren Gästen zukommen zu lassen. Unser Leben basiert auf Geben und dankbarem Empfangen.</p>
+                    <p>Als zweites braucht ein Stamm einen Ort, an dem er tief verwurzelt, Teil einer Landschaft ist. In der Welt der natürlichen Völker ist das Land einfach da – es kann niemandem explizit gehören. Derzeit suchen wir in Schleswig-Holstein, speziell in der Region Stormarn, nach einem Platz für unser Glücksdorf.</p>
+                    <p>Da wir füreinander sorgen, braucht unsere Welt weder Geld noch Abrechnung noch Eigentum. Alles ist ein Geschenk – und so sehen wir auch uns selbst als Geschenke an die Welt.</p>
+                    <p><strong>Es gibt noch viele Dinge, die euch zum Thema Stamm interessieren könnten.</strong> Schickt uns eine <a href="mailto:stefanie@stammdesnordens.org">E-Mail</a> – wir senden euch dann unser Informationsdokument zu.</p>
+                    <h4>Wofür brauchen wir eure Hilfe?</h4>
+                    <p>Um Menschen zusammenzubringen, sind wir häufig mit Gepäck unterwegs (die NU‑Bewegung). Alles beginnt mit dem Zusammentreffen von Herzen. Um zu diesen Menschen zu gelangen, brauchen wir in der gegenwärtigen Welt noch Geld.</p>
+                    <p>Im vergangenen Jahr haben wir ein Fahrzeug (einen Bully mit Ahk) in unseren Stamm geholt. Dafür haben uns Menschen Geld geliehen, das sie natürlich zurückbekommen sollen. Für diese <strong>5000 €</strong> ist der erste Schritt dieser Kampagne gedacht.</p>
+                    <p>Im zweiten Schritt möchten wir Stück für Stück Ressourcen sammeln, um unser Projekt in die Wirklichkeit zu bringen, sobald das Land bereitsteht. In unserem Glücksdorf sollen Häuser renoviert, Jurten gebaut werden – winterfest und naturverträglich. Wir brauchen Holz, Dämmstoffe, Fenster, Türen, Öfen und vieles mehr. Auch mobile Räume (Zirkuswagen, Wohnanhänger) sind willkommen, solange der Ort noch nicht feststeht.</p>
+                    <p>Für unsere Feuerstellen brauchen wir Holz. Bis wir den Rhythmus des Feuerholzes (drei Sonnenzyklen vom Schlagen bis zur Nutzung) etabliert haben, sind wir auf Totholz oder Spenden angewiesen. Auch Solarkraftwerke, Treibstoff für Reisen und andere Energiespenden nehmen wir mit Freude an.</p>
+                    <h4>Was wir geben</h4>
+                    <p>Wer uns unterstützt, kann aus einem vielfältigen Angebot wählen – ganz nach dem Prinzip des Gebens und Empfangens:</p>
+                    <ul>
+                        <li>Kreiskultur erlernen (eigene Entwicklung, Herz sprechen lassen)</li>
+                        <li>Massage, Tanz</li>
+                        <li>Yoga-Anleitung (Kinder-, Schwangeren-, Senioren-Yoga)</li>
+                        <li>Handwerk für jedes Alter (Holz, Leder, Schmuck, Trommeln, Traumfänger)</li>
+                        <li>Live-Musik & gemeinsames Singen (Konzerte, Wohnzimmerkonzerte)</li>
+                        <li>Emotions-Training – die Kraft der eigenen Emotionen entdecken</li>
+                        <li>Juristisches Grundwissen (Rechtskreise, Geld neu definieren, Schuldfalle verlassen)</li>
+                        <li>Rechtsberatung für Menschen, die indigen leben wollen</li>
+                    </ul>
+                    <p style="margin-top:1.5rem; text-align:center;">
+                        <a href="https://gofund.me/9f4d27e8a" target="_blank" class="btn" style="background:var(--gold); color:var(--dark);">💚 Jetzt auf GoFundMe unterstützen</a>
+                    </p>
+                    <p style="text-align:center; font-size:0.9rem;">(Der Link führt zur offiziellen Kampagne)</p>
+                    <p style="margin-top:1rem;">Dieses Jahr fühlt sich an wie ein Jahr des Aufbruchs. Wir freuen uns auf eure Unterstützung und darauf, euch kennenzulernen. Lasst uns miteinander unsere Welt liebevoll, achtsam und frei gestalten.</p>
+                    <p><strong>Liebe Grüße aus dem Stamm des Nordens</strong></p>
+                    <p><small>PS: Wir bereiten gerade einen Image-Film vor, um euch einen noch besseren Eindruck unseres Seins und unserer Pläne zu geben.</small></p>
+                </div>
+
+                <!-- Drei Karten -->
+                <div class="grid-3" style="margin-top:3rem;">
+                    <div class="card"><i class="fas fa-feather-alt icon-large"></i><h3>Heartcircle</h3><p>Regelmäßig in Munkbrarup – schreib uns für Termine.</p></div>
+                    <div class="card"><i class="fas fa-hand-holding-heart icon-large"></i><h3>Unterstützen</h3><p>Mit Zeit, Fähigkeiten, Material oder einer Spende.</p></div>
+                    <div class="card"><i class="fas fa-globe-europe icon-large"></i><h3>Vernetzung</h3><p>Mit anderen Stämmen und indigenen Gruppen weltweit.</p></div>
                 </div>
             </div>
         </section>
     </main>
 
+ <!-- MODALS (Buchkapitel, Leseproben, Impressum, etc.) -->
+     <!-- MODALS FÜR BUCHKAPITEL (9 Stück) -->
+    <div id="modal-kap1" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+
+ <h2>KAPITEL I – DIE QUELLE ALLEN RECHTS</h2>
+
+Es gibt ein Recht, das älter ist als jede Verfassung, jeder Vertrag, jedes menschliche Gesetz.<br> Es ist das Recht, das der Lauf der Sterne schrieb, das die Erde in ihre Schichten eingrub, das das Meer in seinen Gezeiten atmet.<br> Dieses Recht bedarf keiner Unterschrift, keiner Ratifizierung, keiner öffentlichen Bekanntmachung. Es ist einfach da – so selbstverständlich wie der Atem, so unvermeidlich wie der Tod.<br><br>
+
+Die Alten nannten es Naturrecht.<br> Es ist die Summe jener Gesetze, die gelten würden, auch wenn kein Mensch sie je ausgesprochen hätte. Dass du lebst, dass du atmest, dass du einen Platz unter der Sonne hast – das sind keine Gnadengeschenke eines Staates. <br>Es sind deine Ur-Rechte, mit denen du geboren wurdest, noch bevor dich jemand in ein Register eintrug.<br>
+
+Der Staat kann diese Rechte verletzen, aber er kann sie nicht nehmen. Er kann sie ignorieren, aber er kann sie nicht auslöschen. <br>Sie sind wie die Gravitation: ob du an sie glaubst oder nicht, sie wirken immer. Wer sie missachtet, stürzt früher oder später ab.<br><br>
+
+Die Quelle allen Rechts ist der Lebendige Grund selbst – jenes unsichtbare Gewebe, das alle Wesen miteinander verbindet. <br>In ihm ist jeder Mensch ein Knoten, jeder Stein ein Faden, jeder Windhauch ein Atemzug des Ganzen. Aus diesem Grund entspringen die ersten, die fundamentalen Rechte: das Recht zu sein, das Recht zu wachsen, das Recht, in Frieden zu leben. <br>Sie sind so unveräußerlich wie die Tatsache, dass du bist.<br>
+
+Und darum: Kein Gesetz, das diesen Rechten widerspricht, ist im tiefsten Sinne gültig. <br> Es mag gelten, weil es durchgesetzt wird – aber es hat keine Legitimität. Denn Legitimität kommt nicht von Wahlen und nicht von Parlamenten. Sie kommt allein aus der Übereinstimmung mit dem Lebendigen Grund. <br>Ein Gesetz, das tötet, wo Leben sein sollte, das entrechtet, wo Gemeinschaft sein sollte, das trennt, wo Verbindung sein sollte – ein solches Gesetz ist Unrecht in Rechtsform.<br>
+
+Die Quelle allen Rechts ist kein Text, kein Dokument, keine Urkunde. Sie ist das, was war, bevor das erste Wort gesprochen wurde. Und sie wird sein, wenn das letzte Wort verklungen ist. In ihr zu ruhen, bedeutet: unangreifbar zu sein.
+            <div class="chapter-content"><!-- Hier Kapiteltext einfügen --></div>
+        </div>
+    </div>
+    <div id="modal-kap2" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+           
+            <div class="chapter-content"> <h2>KAPITEL II – DER KREIS DER GEMEINSCHAFT</h2><br>
+
+Der Kreis ist die älteste Form der Versammlung, und er ist die weiseste. Denn im Kreis gibt es kein Oben und kein Unten.<br> Alle Gesichter sind einander zugewandt, alle Augen sehen sich, alle Ohren hören. Der Kreis ist das Abbild der Gleichwürdigkeit, die der Lebendige Grund von uns allen fordert.<br><br>
+
+Wer in den Kreis tritt, lässt draußen, was ihn trennt: Titel, Ämter, Rollen. Hier ist keiner mehr Beamter, keiner mehr Bürger, keiner mehr Fremder. Hier sind nur Menschen, die einander zuhören.<br> Und das Zuhören ist die heiligste Kunst im Kreis. Denn wer zuhört, öffnet sich dem anderen. Er verzichtet für einen Augenblick auf seine eigene Stimme, um die des anderen ganz in sich aufzunehmen. Er urteilt nicht, er plant nicht die Antwort, während der andere spricht – er ist einfach da, mit offenem Herzen.<br><br>
+
+Im Kreis spricht einer nach dem anderen. Nicht, weil es eine Reihenfolge gäbe, sondern weil die Zeit im Kreis stillsteht. Es gibt keine Eile, keinen Termindruck, keine Tagesordnung. <br>Das, was besprochen werden muss, kommt von selbst zur Sprache, wenn die Herzen reif sind. Und wenn alle gesprochen haben, kehrt Stille ein. In dieser Stille, in diesem gemeinsamen Schweigen, reift die Entscheidung. Sie fällt wie eine reife Frucht – niemand muss sie erzwingen.<br><br>
+
+Der Kreis kennt keine Abstimmungen. Denn Abstimmungen spalten: hier die Mehrheit, dort die Minderheit. Der Kreis sucht nicht den Sieg einer Meinung, sondern den Einklang aller Herzen. Wenn dieser Einklang nicht zu finden ist, wird weitergesprochen, bis er sich einstellt.<br> Das mag dauern – aber der Kreis hat Zeit, denn er dient keinem Zweck außer dem der Gemeinschaft selbst.<br><br>
+
+Der Kreis ist offen für alle, die in Frieden kommen. Wer Feindschaft mitbringt, bleibt draußen, bis er bereit ist, sie abzulegen.<br> Denn im Kreis ist kein Platz für Waffen, auch nicht für die Waffen der Worte. Hier spricht nur das Herz, und das Herz kennt keine Feinde.<br><br>
+
+Wer im Kreis gesessen hat, weiß: Es gibt eine Ordnung jenseits der Hierarchie. Es gibt eine Macht, die nicht von oben kommt, sondern aus der Mitte.<br> Es gibt eine Gemeinschaft, die nicht organisiert werden muss, weil sie sich von selbst einstellt, wenn die Bedingungen stimmen. <br>Diese Bedingungen sind einfach: Gleichwürdigkeit, Zuhören, Geduld.<br><br>
+
+Der Kreis ist die Keimzelle jeder neuen Gesellschaft. In ihm wächst, was später den Staat ersetzen kann: die Fähigkeit, in Freiheit und Frieden zusammenzuleben, ohne Herrschaft und ohne Unterwerfung.<br> Der Kreis ist die Antwort auf die Pyramide.</div>
+        </div>
+    </div>
+    <div id="modal-kap3" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>KAPITEL III – DIE NEUN SCHWERTER: DIE WUNDEN DER ALTEN WELT</h2>
+<br>
+Die alte Welt ist voller Schwerter. Neun an der Zahl, neun Waffen, die das Herz durchbohren, neun Qualen, die den Menschen von sich selbst trennen.<br> Sie sind die Werkzeuge derer, die vergessen haben, dass sie selbst nur Gäste auf dieser Erde sind.<br><br>
+
+Das erste Schwert: Unterdrückung. <br>Es zwingt den Willen nieder, bricht den Widerstand, macht aus Menschen Werkzeuge fremder Zwecke. <br>Es spricht: „Du darfst nicht, du sollst nicht, du musst.“ Und wer sich beugt, verliert ein Stück seiner Seele.<br>
+
+Das zweite Schwert: Lüge. <br>Es vernebelt die Wahrheit, verdreht die Tatsachen, macht aus Tag Nacht und aus Nacht Tag. <br>Es flüstert: „Glaube mir, nicht deinen Augen.“ Und wer glaubt, wird blind.<br>
+
+Das dritte Schwert: Habgier. <br>Es will immer mehr, nie genug. Es rafft zusammen, was anderen gehört, und nennt es Eigentum. <br>Es sagt: „Das ist meins, und du hast kein Recht darauf.“ Und wer hungert, sieht zu.<br>
+
+Das vierte Schwert: Gewalt. <br>Es schlägt zu, wo Worte reichen würden. Es quält, foltert, tötet – und nennt es Ordnung.<br> Es behauptet: „Nur so kann ich dich schützen.“ Und wer getroffen wird, vergisst, dass es auch Liebe gibt.<br>
+
+Das fünfte Schwert: Gleichgültigkeit. <br>Es sieht weg, wenn Hilfe nötig wäre.<br> Es zuckt die Achseln und sagt: „Nicht mein Problem.“ Und wer leidet, bleibt allein.<br>
+
+Das sechste Schwert: Verrat. <br>Es bricht Vertrauen, löst Versprechen auf, macht Freund zu Feind. Es flüstert: „Jeder ist sich selbst der Nächste.“ <br>Und wer verraten wurde, traut niemandem mehr.<br>
+
+Das siebte Schwert: Scham. <br>Es flüstert: „Du bist nicht genug. Du bist falsch. Du gehörst nicht dazu.“<br> Es nagt am Selbstwert, bis nichts bleibt als ein Häuflein Elend. Und wer sich schämt, zeigt sich nicht mehr.<br>
+
+Das achte Schwert: Angst. <br>Es ist der Schatten, der alles verschluckt. <br>Es malt die schlimmsten Bilder an die Wand, lässt keinen Schlaf zu, keinen Frieden.<br> Es sagt: „Gleich kommt das Ende.“ Und wer Angst hat, lebt nicht mehr.<br>
+
+Das neunte Schwert: Einsamkeit.<br> Es trennt den Menschen von allem, was lebt. Es baut Mauern um das Herz, lässt keine Liebe herein, keine Wärme.<br> Es flüstert: „Du bist allein, und du wirst immer allein sein.“ Und wer einsam ist, stirbt bei lebendigem Leib.<br>
+
+Diese neun Schwerter sind die Waffen der alten Welt. <br>Jeder Angriff auf die Würde eines Menschen ist ein Hieb mit ihnen. <br>Jede willkürliche Festnahme, jede Demütigung, jeder Raub von heiligen Gegenständen – sie alle hinterlassen Wunden.<br><br>
+
+Doch die Schwerter können nicht töten, was ewig ist. <br>Die Seele bleibt unverletzbar. Sie schreit, sie klagt, sie weint – aber sie stirbt nicht.<br>
+Und ihre Klage ist der erste Schritt zur Heilung. Denn wer die Wunde benennt, beginnt, sie zu schließen.<br>Wer das Schweigen bricht, ruft die Helfer auf den Plan.<br>Die neun Schwerter sind mächtig, aber sie sind nicht die letzte Wahrheit.<br><br>
+
+Im Schatten der Schwerter keimt bereits das neue Leben. Die alte Welt mag uns verwunden – aber sie kann uns nicht vernichten.<br>Denn wir sind aus einem Stoff, den ihre Waffen nicht durchdringen: aus dem Stoff der Ewigkeit.
+            <div class="chapter-content"></div>
+        </div>
+    </div>
+    <div id="modal-kap4" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>KAPITEL IV – DIE ZEHN KELCHE: DIE FÜLLE DES HERZENS</h2>
+
+Den neun Schwertern stehen die zehn Kelche gegenüber.<br>Sie sind gefüllt mit dem Wasser des Lebens, das aus der Quelle des Einen Baumes strömt.<br>Wer aus ihnen trinkt, wird neu geboren. Wer sie leert, füllt sie wieder – denn ihre Fülle ist unerschöpflich.<br><br>
+
+Der erste Kelch: Liebe.<br>Sie ist die Kraft, die alles verbindet, die Grenzen auflöst, die das Getrennte wieder eins macht.<br>Liebe fragt nicht nach Verdienst, nicht nach Würdigkeit. Sie ist einfach da, wie die Sonne, die scheint, ohne zu fragen, wer ihre Wärme empfängt.<br><br>
+
+Der zweite Kelch: Freude. <br>Sie ist das Lachen, das die Seele befreit, das Tanzen, das den Körper leicht macht, das Ja zum Leben in all seinen Facetten. Freude ist der Beweis, dass es gut ist, zu sein.<br><br>
+
+Der dritte Kelch: Frieden. <br>Er ist die Stille, in der alles heilt. Nicht die Stille des Grabes, sondern die Stille des Waldes, in dem das Leben flüstert.<br> Frieden ist nicht die Abwesenheit von Konflikt, sondern die Gegenwart von Harmonie.<br><br>
+
+Der vierte Kelch: Verbundenheit. <br>Sie ist das Wissen, nicht allein zu sein. Dass hinter jedem Menschen eine Gemeinschaft steht, hinter jeder Gemeinschaft die Ahnen, hinter den Ahnen die Erde selbst. <br>Verbundenheit ist das Netz, das uns alle trägt.<br><br>
+
+Der fünfte Kelch: Vertrauen.<br> Er ist der Grund, auf dem wir stehen. Nicht blindes Vertrauen, sondern das tiefe Wissen: Es ist gut, sich zu öffnen.<br> Es ist gut, loszulassen. Das Leben meint es gut mit uns.<br><br>
+
+Der sechste Kelch: Großzügigkeit.<br> Sie ist das Geben, das nicht zählt. Die Hand, die sich öffnet, ohne nachzurechnen. <br>Großzügigkeit ist der Fluss des Lebens selbst, der immer strömt und nie versiegt.<br><br>
+
+Der siebte Kelch: Dankbarkeit. <br>Sie ist das Staunen über das Geschenkte. Dass wir atmen dürfen, dass wir lieben dürfen, dass wir hier sein dürfen – das ist kein Zufall, sondern ein Wunder.<br> Dankbarkeit ist die angemessene Antwort.<br><br>
+
+Der achte Kelch: Hoffnung. <br>Sie ist der Stern, der in der dunkelsten Nacht leuchtet. <br>Nicht als Garantie, dass alles gut wird, sondern als Einladung, weiterzugehen. Hoffnung ist der Mut, nicht aufzugeben.<br><br>
+
+Der neunte Kelch: Schönheit.<br> Sie ist das Leuchten in allen Dingen – im Grashalm, im Sonnenuntergang, im Lächeln eines Kindes. <br>Schönheit ist die Sprache, in der das Göttliche zu uns spricht.<br><br>
+
+Der zehnte Kelch: Geheimnis. <br>Er ist das Unsagbare, das uns trägt. Das, was wir nie ganz verstehen werden, was aber immer da ist – als Grund, als Abgrund, als unendliche Tiefe.<br> Das Geheimnis ist der Raum, in dem alles geschieht.<br><br>
+
+Wer diese zehn Kelche in sich trägt, ist reich, auch wenn er nichts besitzt.<br> Wer sie leert und weitergibt, wird reicher, denn sie füllen sich immer wieder neu.<br> Die zehn Kelche sind die Fülle des Herzens, die kein Staat gewähren und kein Staat nehmen kann.<br> Sie sind die Früchte des Einen Baumes – für alle, die sich im Kreis versammeln, um sie zu teilen.
+            <div class="chapter-content"></div>
+        </div>
+    </div>
+    <div id="modal-kap5" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>KAPITEL V – DER FUNKE: DIE PRINZESSIN DES FEUERS</h2>
+
+Zwischen Wunde und Fülle tanzt ein junges Feuer: der Funke der Selbstbestimmung. Er ist die Kraft, die sich nicht unterwerfen will, die eigene Wege geht, die sich aus alten Mustern befreit. <br>In jeder Seele glimmt dieser Funke, oft verschüttet unter Schichten von Angst und Anpassung. Doch wenn die Zeit reif ist, wird er zur Flamme.<br><br>
+
+Die Prinzessin des Feuers ist der Archetyp dieses Erwachens.<br> Sie ist jung, aber nicht unerfahren. Sie ist mutig, aber nicht tollkühn. Sie tanzt auf der Asche des Alten und fürchtet sich nicht vor der Glut, denn sie selbst ist Feuer. Sie weiß: Um etwas Neues zu schaffen, muss man bereit sein, das Alte loszulassen.<br><br>
+
+Ihr Tanz ist der Tanz der Befreiung. Jede Bewegung sagt: „Ich bin nicht, was man aus mir gemacht hat. Ich bin nicht die Nummer im Pass, nicht der Fall in der Akte, nicht die Diagnose auf dem Papier. <br>Ich bin ein Wesen aus Licht, mit eigenem Willen, eigener Würde, eigenem Recht.“ Dieser Funke ist der Ursprung jeder Befreiungsbewegung, jeder Stammesgründung, jedes Aufbruchs in eine neue Welt.<br><br>
+
+Die Prinzessin des Feuers fragt nicht um Erlaubnis. Sie handelt, weil sie nicht anders kann. Ihr Feuer brennt so hell, dass es andere entzündet. Wo sie tanzt, springen Funken über, und bald lodern viele Flammen. <br>Sie ist die Anführerin, die nicht befiehlt, sondern vorlebt. Sie ist die Königin, die nicht herrscht, sondern dient – dem Feuer, das in ihr brennt.<br><br>
+
+In jedem von uns lebt diese Prinzessin. Wir müssen sie nur wecken. Manchmal genügt ein einziger Moment der Klarheit, ein einziger Blick hinter den Vorhang der Illusionen, und der Funke springt über. <br>Dann wissen wir: Es gibt keinen Weg zurück. Wir sind auf dem Pfad der Freiheit, und nichts kann uns mehr aufhalten.<br><br>
+
+Doch der Funke ist zerbrechlich. Er braucht Nahrung, sonst erlischt er. Er braucht Gemeinschaft, sonst verliert er sich. Er braucht Weisheit, sonst verbrennt er, was er liebt. <br>Die Prinzessin des Feuers muss tanzen lernen, ohne sich selbst zu verzehren. Sie muss die Alchemistin finden, die ihr zeigt, wie man das Feuer bändigt, ohne es zu löschen.<br><br>
+
+Der Funke ist der Anfang. Aber er ist nicht das Ende. Aus ihm wird die Flamme, aus der Flamme das Feuer, aus dem Feuer die Wärme, die alle umfasst.<br> Die Prinzessin des Feuers ist die Tür, durch die wir gehen müssen. Aber was dahinter liegt, ist größer als sie. Es ist das Reich der Verwandlung.</h2><br>
+            <div class="chapter-content"></div>
+        </div>
+    </div>
+    <div id="modal-kap6" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>KAPITEL VI – DIE GROSSE VERWANDLUNG: TOD UND WIEDERGEBURT</h2>
+
+Alles Alte muss sterben, damit Neues werden kann. Das ist das erste und letzte Gesetz des Lebens.<br> Die Blätter fallen im Herbst, damit der Baum im Frühling neu austreiben kann. Die Raupe löst sich auf, damit der Schmetterling entstehen kann. Der Same muss brechen, damit die Pflanze wachsen kann.<br><br>
+
+Der Tod ist kein Feind, sondern ein Gärtner. Er mäht nicht nieder, was lebendig ist – er erntet, was reif ist. Er macht Platz für Neues. <br>Wer den Tod fürchtet, fürchtet das Leben selbst. Denn wer nicht sterben will, kann auch nicht wirklich leben. Er klammert sich an das Alte, an das Vertraute, an das Sichere – und verpasst das Wunder der Verwandlung.<br><br>
+
+Die große Verwandlung ist der Prozess, in dem wir sterben, bevor wir sterben. Wir lassen los, was uns bindet: die alten Geschichten, die schmerzhaften Erinnerungen, die falschen Überzeugungen. <br>Wir lassen los, was uns trennt: den Groll, die Wut, die Rachegelüste. Wir lassen los, was uns klein hält: die Angst vor der Meinung anderer, die Sucht nach Anerkennung, den Zwang, es allen recht zu machen.<br><br>
+
+Dieser Tod ist schmerzhaft. Er reißt Wunden auf, die längst verheilt schienen. Er konfrontiert uns mit dem, was wir am meisten fürchten: der Leere, dem Nichts, der Bedeutungslosigkeit. <br>Doch wer durch diese Leere hindurchgeht, entdeckt: Sie ist nicht leer. Sie ist voller Möglichkeit. Sie ist der Raum, in dem Neues entstehen kann.<br><br>
+
+Die Wiedergeburt geschieht von selbst, wenn der Tod vollzogen ist. Wie der Schmetterling, der sich aus der Puppe kämpft, kommen wir ans Licht – zitternd, noch feucht, noch unsicher. <br>Aber wir sind da. Neu. Anders. Wir atmen die Luft der Freiheit, die wir vorher nicht kannten.<br><br>
+
+Die große Verwandlung ist kein einmaliges Ereignis. Sie geschieht immer wieder, in jedem Loslassen, in jedem Neubeginn.<br> Sie ist der Rhythmus des Lebens selbst, der Puls des Einen Baumes. Wer sich ihr anvertraut, wird immer wieder neu geboren. Er altert nicht, er stirbt nicht – er verwandelt sich.<br><br>
+
+Darum fürchte den Tod nicht. Fürchte nur das Leben, das keins ist, weil du dich weigerst, zu sterben. Wage den Sprung ins Ungewisse. <br>Löse dich auf, um neu zu werden. Stirb, bevor du stirbst – und dann wirst du nicht sterben.</h2>
+            <div class="chapter-content"></div>
+        </div>
+    </div>
+    <div id="modal-kap7" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>KAPITEL VII – DIE ZWEI WEGE: KRIEGERIN UND ALCHEMIST</h2>
+
+Zwei Archetypen durchziehen die Geschichte der Befreiung: die Kriegerin und der Alchemist. <br>Sie sind wie Tag und Nacht, wie Einatmen und Ausatmen, wie Feuer und Wasser. Beide sind notwendig, beide sind heilig.<br><br>
+
+Die Kriegerin trägt die Last des Kampfes.<br> Sie steht in vorderster Linie, den Blick fest auf den Feind gerichtet. Sie lässt sich nicht beugen, nicht brechen, nicht beirren. <br>Sie ist der Schild, der die Ihren schützt, das Schwert, das die Ketten durchtrennt. Ohne sie würde der Funke erlöschen, bevor er zur Flamme wird. Sie ist die Kraft, die Nein sagt, wenn alle Ja sagen. Sie ist der Mut, der aufsteht, wenn alle sitzen bleiben.<br><br>
+
+Doch die Kriegerin hat eine Schwäche: Sie sieht nur den Feind vor sich. Sie vergisst, dass der Feind auch in ihr selbst wohnt – in der Wut, die blind macht, in der Härte, die das Herz verschließt, in der Siegesgewissheit, die überheblich macht. Wenn sie allein bleibt, wird sie selbst zum Feind.<br><br>
+
+Der Alchemist ist ihr Gegenpart. Er verbindet die Gegensätze, findet die goldene Mitte, verwandelt Blei in Gold. <br>Er ist der Weber zwischen den Welten, der Brückenbauer zwischen Staat und Stamm, zwischen Recht und Liebe. Er erkennt, dass der eigentliche Feind nicht draußen ist – er ist in den Mustern des Denkens, in den alten Geschichten, die wir uns erzählen, in der Angst, die uns gefangen hält.<br><br>
+
+Der Alchemist kämpft nicht – er verwandelt. Er löst auf, was starr ist, und fügt neu zusammen, was zusammengehört. <br>Er ist der Heiler, der die Wunden der Kriegerin salbt, der Friedensstifter, der den Kreis öffnet für die, die Feinde waren. Ohne ihn würde der Kampf ewig währen, ohne Ende, ohne Sinn.<br><br>
+
+Doch auch der Alchemist hat eine Schwäche: Er kann sich verlieren im Spiel der Gegensätze, im ewigen Abwägen, im endlosen Vermitteln.<br> Er kann vergessen, dass es Zeiten gibt, in denen nur das Schwert hilft, in denen die Verwandlung zu lange dauert, in denen die Kriegerin gerufen ist.<br><br>
+
+Die Kriegerin und der Alchemist brauchen einander. Sie sind die beiden Flügel des Vogels, die beiden Wurzeln des Baumes. <br>In ihrer Verbindung entsteht jene Kraft, die Berge versetzen kann – nicht durch Gewalt, sondern durch das untrennbare Band zwischen Feuer und Weisheit.<br><br>
+
+Jede Gemeinschaft braucht beide. Jeder Mensch trägt beide in sich. Die Kunst ist, sie zu erkennen und zu ehren, sie tanzen zu lassen im Kreis der Einheit. Mal führt die Kriegerin, mal der Alchemist.<br> Mal ist Kampf angesagt, mal Verwandlung. Wer beide in sich vereint, ist unbesiegbar.
+            <div class="chapter-content"></div>
+        </div>
+    </div>
+    <div id="modal-kap8" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>KAPITEL VIII – DIE ZWÖLF GRUNDRECHTE DER SEELE</h2>
+
+Aus dem Einen Baum erwachsen zwölf unveräußerliche Rechte. Sie sind die unsichtbare Rüstung, die jede souveräne Seele umgibt. <br>Kein Staat kann sie geben, kein Staat kann sie nehmen. Sie sind der Maßstab, an dem sich jede menschliche Satzung messen lassen muss.<br>
+
+Das erste Recht: das Naturrecht. Es ist das Recht, im Einklang mit der Erde zu leben, ihre Früchte zu nehmen und ihr im Tod wiederzugeben. Es ist das Recht auf Luft, Wasser, Nahrung – die Grundlagen des Lebens selbst.<br>
+
+Das zweite Recht: die göttliche Autorität. Es ist das Recht, aus der Quelle allen Seins zu schöpfen, der eigenen Intuition zu vertrauen, die Verbindung zum Unsichtbaren zu pflegen. Keine Institution darf sich zwischen dich und das Göttliche stellen.<br>
+
+Das dritte Recht: die Selbstbestimmung. Es ist das Recht, über sich selbst zu verfügen, eigene Entscheidungen zu treffen, den eigenen Weg zu gehen. Dein Körper gehört dir, dein Geist gehört dir, dein Leben gehört dir.<br>
+
+Das vierte Recht: der freie Handel. Es ist das Recht, fair und frei zu wirtschaften, Gaben zu tauschen, Werte zu schaffen. Niemand darf dich zwingen, zu kaufen oder zu verkaufen, was deinem Wesen widerspricht.<br>
+
+Das fünfte Recht: die kollaterale Identität. Es ist das Recht, die Pass-Person als Werkzeug zu nutzen, ohne sich mit ihr zu identifizieren. Du bist nicht das Dokument, das man dir ausgestellt hat. Du bist mehr.<br>
+
+Das sechste Recht: das Gemeinrecht. Es ist das Recht auf die Weisheit der Ahnen, auf die ungeschriebenen Gesetze, die sich über Jahrhunderte bewährt haben. Die Tradition ist nicht immer richtig – aber sie hat ein Recht, gehört zu werden.<br>
+
+Das siebte Recht: die Vertragsfreiheit. Es ist das Recht, bindende Abmachungen zu treffen, Versprechen zu geben und zu halten. Dein Wort ist deine Ehre – und deine Ehre ist unantastbar.<br>
+
+Das achte Recht: die Proklamation. Es ist das Recht, deine Wahrheit zu verkünden, zu rufen, zu zeugen. Kein Mensch darf dir den Mund verbieten, solange du nicht zur Gewalt aufrufst.<br>
+
+Das neunte Recht: die energetische Souveränität. Es ist das Recht, über deine Lebenskraft zu bestimmen, sie nicht zu verschleudern, dich vor energetischem Raub zu schützen. Deine Energie gehört dir.<br>
+
+Das zehnte Recht: die heilige Geometrie. Es ist das Recht auf Harmonie in allen Strukturen. Was du baust, soll im Einklang sein mit den ewigen Proportionen der Schöpfung – in deinem Haus, in deiner Gemeinschaft, in deinem Leben.<br>
+
+Das elfte Recht: die kosmische Resonanz. Es ist das Recht, mit dem Universum verbunden zu sein, die Zeichen zu lesen, im großen Orchester mitzuspielen. Du bist nicht allein – du bist Teil eines Ganzen.<br>
+
+Das zwölfte Recht: die zeitlose Gültigkeit. Es ist das Recht, jenseits von Zeit und Raum zu existieren – im ewigen Jetzt, im Nu, im Augenblick, der niemals vergeht. Du warst, du bist, du wirst sein – in einer anderen Form, aber immer als Teil des Einen.<br>
+
+Diese zwölf Rechte sind der Kompass für alle, die in Freiheit leben wollen. Wer sie kennt, kann sich nicht verirren. Wer sie lebt, kann nicht untergehen. Sie sind die Wurzeln des Einen Baumes in jeder einzelnen Seele.</h2>
+            <div class="chapter-content"></div>
+        </div>
+    </div>
+    <div id="modal-kap9" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>KAPITEL IX – DIE RÜCKKEHR ZUM EINEN BAUM</h2>
+
+Am Ende aller Wege steht die Erkenntnis: Wir sind nie getrennt gewesen. Die Schwerter, die uns trafen, waren nur Schatten an der Wand der Höhle. Die Kelche, die wir füllten, waren immer schon übervoll.<br> Der Funke, der uns entzündete, ist das ewige Licht des Einen Baumes. Die Verwandlung, die wir durchlitten, war die Geburt in unser wahres Selbst.<br><br>
+
+Die Rückkehr ist keine Reise durch den Raum. Sie ist ein Erwachen im Geist. Ein Innehalten, ein Lauschen, ein plötzliches Sehen. Wir schauen auf unser Leben und erkennen: Alles, was geschah, war notwendig. <br>Jeder Schmerz hatte seinen Sinn, jede Freude ihr Geschenk, jede Verwirrung ihre Lektion. Das Muster war immer da – wir haben es nur nicht gesehen.<br><br>
+
+Der Eine Baum, von dem die alten Geschichten sprechen, ist kein Mythos. Er ist die Wirklichkeit selbst. Seine Wurzeln sind die Gesetze, die wir in diesem Buch beschrieben haben.<br> Sein Stamm ist die Gemeinschaft derer, die ihn erkennen. Seine Krone ist die unendliche Vielfalt der Erscheinungen – jeder Mensch ein Blatt, jede Blüte ein Traum, jede Frucht eine Tat.<br><br>
+
+In der Stille des Kreises, im Herzschlag der Trommel, im Flüstern des Windes durch die Blätter spüren wir es: Wir sind zu Hause. Nicht in einem Land, das auf Landkarten verzeichnet ist, nicht in einem Staat, der mit Paragrafen regiert, sondern im lebendigen Organismus der Schöpfung. <br>Hier gilt kein anderes Gesetz als die Liebe. Keine andere Ordnung als die, die aus dem Herzen kommt.<br><br>
+
+Die Rückkehr ist kein Ziel, das man erreicht, und dann ist Schluss. Sie ist ein ewiges Ankommen. Ein immer tieferes Eintauchen in das, was immer schon war. Jeder Heartcircle, jede gemeinsame Mahlzeit, jedes geteilte Schweigen ist ein Schritt auf diesem Weg. Und jeder Schritt ist schon das Ziel.<br><br>
+
+Die Rückkehr ist die Bewegung, die sich selbst aufhebt. Denn wer ankommt, ist nie weg gewesen. Wer findet, hat nie verloren. Wer erwacht, hat immer geschlafen – und war doch immer wach.<br><br>
+
+So kehren wir heim, indem wir erkennen, dass wir nie fort waren. So finden wir Frieden, indem wir sehen, dass Krieg nur ein Traum war.<br> So werden wir frei, indem wir begreifen, dass wir nie gebunden waren – außer durch den Glauben an die Ketten.<br><br>
+
+Und dann wandeln wir in Schönheit. <br>Jeder ein Blatt am Einen Baum.<br> Und der Baum ist Frieden, und der Frieden ist in uns. <br>Und wir wissen: Dies ist die Rückkehr, die niemals endet.
+<br><br>
+In unendlicher Liebe und Bruderschaft
+            <div class="chapter-content"></div>
+        </div>
+    </div>
+
+    <!-- Leseproben-Modals für Steffis Bücher -->
+    <div id="modal-leseprobe-eiswall" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Der Eiswall – Leseprobe</h2> a) Die Einführung – Der Ton des Ganzen
+
+    Ich habe mich entschieden, meine Geschichte mit dir zu teilen, denn ich weiß, du bist ein Teil von mir, deshalb liegen diese Seiten jetzt vor dir. Vielleicht sind dir viele Dinge in diesem Buch schon vertraut, vielleicht scheint aber auch manches so herausfordernd, dass du überlegst, das Buch wieder zur Seite zu legen.
+
+    Alles, was wir glauben zu wissen, ist bestenfalls Stückwerk, meistens nur der Zustand einer Sache in diesem Moment. Wenn ich weiß, dass meine Bluse rot ist, ist das meine Beschreibung eines optischen Ausdrucks, der sich mit dem Ausdruck anderer deckt. Wissen ist also Definition und Fixierung. Wenn meine Bluse verbrennt oder in Farbe fällt, ist mein Wissen über die Bluse veraltet.
+
+    Dein Leben hat bis hierher eine scheinbar sichere Statik entwickelt, die auf deinen bisherigen Erkenntnissen und Interpretationen beruht. Manche Gedanken in diesem Buch werden genau an dieser Statik wackeln, und das fühlt sich vielleicht unangenehm an, oder aber es fühlt sich erleichternd und erhellend an. Am Ende ist das deine Wahl.
+
+Diese Zeilen zeigen die behutsame, einladende Art, mit der Steffie den Leser abholt. Er verspricht keine neuen Dogmen, sondern regt an, die eigene Wahrnehmung zu prüfen.
+b) Die Entdeckung des Indigenen Status – ein Schlüsselmoment
+
+    Ich war aufgewühlt. Mein Herz pochte. Ich war wütend über so eine geballte Dummheit und den Mangel an Bereitschaft, sich wirklich in einem aufgeschlossenen Gespräch zu begegnen.
+
+    Wie war es dazu gekommen? Anfang des Jahres hatten wir die Entscheidung getroffen, unser Leben als deutsche Staatsbürger zu beenden. Eigentlich hätten wir zu unserem vollendeten 14. Lebensjahr gefragt werden müssen, ob wir uns dafür entscheiden, Staatsbürger zu werden oder ob wir als Volksangehörige leben wollen. Ich weiß nicht wie es dir geht, aber ich wusste damals nicht einmal, dass es dazwischen einen Unterschied geben könnte.
+
+    Tatsächlich gelten Menschenrechte nur für Volksangehörige, nicht aber für Staatsbürger. Für die gibt es nämlich Staatsgesetze, solange sie sich als Bürger sehen.
+
+Hier wird greifbar, wie Steffie durch persönliche Betroffenheit (der Ausschluss aus den Germaniten) in die Tiefe der Rechtsmaterie vordringt. Die Erkenntnis, dass „Staatsbürger“ und „Mensch mit Menschenrechten“ nicht dasselbe sind, ist ein zentraler Punkt.
+c) Die Enthüllung der Geburtsurkunde
+
+    Was also tatsächlich passiert, wenn eine Geburtsurkunde ausgestellt wird, wird der Mensch zur Person. Diese Person ist dann als Sklave erfasst, und dem Staatsrecht unterworfen, in dessen Staat er verhaftet ist.
+
+    Diese Urkunde wird an staatenübergreifenden Börsen gehandelt, sie ist an Zeit und Geld gebunden. Der Wert pro Geburtsurkunde ist natürlich den Schwankungen der Währungssysteme unterworfen. Zurzeit soll der Wert pro Urkunde mit 19 Millionen Euro beziffert sein.
+
+Diese Passage ist ein Paradebeispiel für Steffies Fähigkeit, hochkomplexe juristische Zusammenhänge in verständliche, fast poetische Sprache zu übersetzen. Sie öffnet die Augen für die wahren Mechanismen hinter dem „Personenstatus“.
+d) Das Wesen des Geldes – eine tiefe Einsicht
+
+    Geld wirkt wie eine Droge, wenn du sie einmal nutzt, wirst du abhängig, und es ist sehr schwer, wieder clean zu werden.
+
+    Geld ist also einmal eine Recheneinheit, deren Gegenwert in wieder andere Waren und Dienstleistungen eingetauscht werden kann, wenn genug Menschen an seiner Verwendung Gefallen finden und wenn es einen Vermehrungsmechanismus gibt, der die Geldmenge an die nutzende Fangemeinde gewährleistet.
+
+    Der Vorteil ist leicht ersichtlich: Du musst nicht 15 Minuten beim Bäcker arbeiten für dein Brot und auch nicht 10 Minuten beim Bauern für deine Butter. Geld wird zum Universaltauschmittel.
+
+    Das Problem heute: Die Art des Geldes und die Machtkonzentration.
+
+Steffie verurteilt Geld nicht pauschal, sondern zeigt seine historische Entwicklung und seine heutige perverse Machtkonzentration. Der Hinweis auf den „Vermehrungsmechanismus“ (Zins) ist zentral.
+e) Die Frage nach dem Wo – das Weltbild
+
+    Stell dir einmal vor, ungerechterweise in einem Gefängnis zu sein, ohne Chance auf Gnade. Wenn du so in einem Gefängnis bist und herausmöchtest, dann suchst du was? Genau: Den Ausgang. Der Ausgang ist dann das Tor zur Freiheit.
+
+    Wenn die Erde eine Kugel ist, dann ist das bei aktueller Technik ein geschlossenes System, aus dem es kein Entrinnen gibt. Du bist nicht hier, weil du dazu verurteilt wurdest, du bist hier per Geburt, wie alle anderen auch. Ein anderes Leben als das hier gibt es für dich nicht.
+
+    Aber stell dir einmal vor, die Erde sei eine Scheibe, und die Antarktis ein gigantischer Ring, der die Kontinente umschließt. Jenseits dieses Eiswalles gibt es noch mehr Land, andere Planeten, andere Welten.
+
+    Welche Auswirkungen würde die Aussicht auf freies Land auf den Rest der Menschen haben? Würden sie sich einfach weiter alles gefallen lassen, was sie hier erleben, oder würden sie „Tschüß“ sagen?
+
+Hier wird der Buchtitel konkret: Der Eiswall als reale, physische Grenze – und als Metapher für die Begrenzung unseres Bewusstseins. Steffie stellt die gängige Globus-Erzählung in Frage und öffnet den Raum für eine völlig neue Perspektive auf unsere Gefangenschaft.
+f) Der Aufruf am Ende
+
+    Lasst uns zusammenfinden, Stämme bilden und gemeinsam füreinander sorgen. Lasst uns das Geld und jede Form der Abrechnung sowie die Wirksamkeit aller fiktiven Gesetze und Staaten aus unserer Mitte entfernen. Lasst uns stattdessen Liebe und Hingabe erwählen, und miteinander aufrecht streiten um den richtigen Weg, Aug in Auge mit Wort und Tat – immer im Sein.
+
+Dieser Abschluss des Kapitels „Krieg und Frieden“ ist eine kraftvolle Einladung zur praktischen Umsetzung. Er fasst die Vision zusammen, die auch die Verfassung trägt.
+            <div class="chapter-content"></div>
+        </div>
+    </div>
+    <div id="modal-leseprobe-verfassung" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Verfassung freier Völker – Leseprobe</h2>
+a) Die Präambel – das Herzstück
+
+    Die Indigenen Menschen der Erde, in Achtung voreinander und vor der Natur aller Dinge, geben sich diese Verfassung, zu der sich jeder ausschließlich durch Bekenntnis in Worten und Taten und ausschließlich durch sich selbst verpflichtet. Sie ist Verfassung für die sich dazu bekennenden Menschen untereinander und gleichzeitig Proklamation gegenüber allen Herrschaftssystemen der Welt.
+
+    Diese Dokument-Verfassung existiert nur als Übergang aus der Welt der Dokument-Verfassungen, in die Welt der Wort-Verfassungen und schließlich in das freie Leben der Menschen.
+
+Diese Präambel ist ein Meisterwerk der Demut und Klarheit. Sie stellt klar, dass kein geschriebenes Wort das lebendige Miteinander ersetzen kann – und doch gibt sie für die Übergangszeit eine Orientierung.
+b) Artikel 1 – Die Grundausrichtung
+
+    Wir dienen dem Leben und wir sind Leben, als Teil des schöpferischen Willens, der sich in uns selbst und in der Natur ausdrückt. Wir leben in der Erkenntnis der Verbindung unserer Herzen, als schöpfende Geschöpfe unseres Schöpfers.
+
+Kurz, bündig und voller Tiefe: Es geht nicht um Rechte, sondern um Dienst am Leben. Der Mensch als Teil eines größeren Ganzen.
+c) Artikel 3 – Eigentum und Verrechnung
+
+    Die Schöpfung gehört sich selbst. Niemand kann sie sich exklusiv aneignen oder sie besitzen. Alles, was da ist, ist ein Geschenk. In Allem, was ist, schwingt die Natur auch dann, wenn sie vom Menschen bearbeitet wurde.
+
+    a. Die Natur verrechnet ihre Dienste nicht, weder mit Währungen und Zeiteinheiten, weder durch Kalender noch durch Tauschhandel, daher tun wir das auch nicht. Der Mensch trägt als Teil der Natur Sorge dafür, dass Nehmen und Geben in einer für alles Leben gesunden Waage bleiben.
+
+Hier wird die Absage an Eigentum und Geldwirtschaft klar formuliert – und gleichzeitig das Prinzip der gegenseitigen Fürsorge verankert.
+d) Artikel 8 – Der Klan als Grundbaustein
+
+    Wir bilden örtliche Klans, denen sich Menschen anschließen können, um tägliches, gemeinsames Leben zu gestalten. Der Klan bildet das zentrale Lebenselement, den Grundbaustein des Lebens unseres Volkes.
+
+    a. Der Klan trifft sich regelmäßig, um die Beziehung seiner Sippen zu pflegen, die Herzen miteinander auszutauschen oder auftretende Herausforderungen Einzelner aufzunehmen. Jeder Klanangehörige nimmt an diesen Versammlungen mit Leib, Herz und Seele teil.
+
+    e. Jeder trägt Verantwortung innerhalb des Klans so, dass es keiner Obrigkeit und keiner Gerichtsbarkeit bedarf.
+
+Diese Passage zeigt, wie das Zusammenleben praktisch organisiert sein kann – ohne Hierarchien, ohne Ämter, allein durch regelmäßige Begegnung und gegenseitige Verantwortung.
+e) Steffies Gedanken zur Verfassung – eine Kostprobe
+
+    Eine Verfassung macht nur so viel Sinn, wie sie Menschen unterstützen kann, einen gemeinsamen Weg zu gehen. Sie geht also mehr in die Richtung eines gemeinsamen Glaubensbekenntnisses als in die Richtung dessen, was wir als Gesetze wahrnehmen.
+
+    Glaubensbekenntnisse werden wiederkehrend rezitiert. Das hat die Wirkung vergleichbar mit der Wirkung eines Mantras. Wenn ich die Worte eines Bekenntnisses ausspreche, entsteht in mir eine Resonanz.
+
+    Von daher dürfte eine Verfassung auch gerne poetische Anteile haben, mit Rhythmus und Tönen verbunden werden, damit sie in ein gemeinsames Bewusstsein dringt.
+
+Steffie reflektiert hier die eigentliche Funktion einer Verfassung: Sie soll nicht regeln, sondern verbinden. Sie ist ein gemeinsames Lied, ein Mantra, das die Herzen auf eine gemeinsame Frequenz bringt.
+f) Die abschließenden Worte
+
+    Für mich ist dieser Gedankengang eine Art Leitplanke, die nur helfen kann, aber nicht die Herausforderungen lösen, die auf uns zukommen. Daher sollte der Entwurf ein Entwurf bleiben, überarbeitet werden und durch Erfahrungen komplettiert, bzw. bereinigt.
+
+    Jede Definition erzeugt eine künstliche Polarität und damit Uneinigkeit. Uneinigkeit ist an sich nichts Schlechtes. Uneinigkeit erzeugt Reibung. Leben braucht Reibung aber nicht Zerstörung.
+
+    Ich wünsche uns allen gutes Gelingen auf dem Weg in die neue Welt!
+
+Diese Zeilen zeigen die tiefe Weisheit und Bescheidenheit des Autors: Die Verfassung ist kein fertiges Produkt, sondern ein lebendiger Prozess, der durch das Leben selbst immer wieder neu geschrieben wird.
+            <div class="chapter-content"></div>
+        </div>
+    </div>
+    <!-- Lightbox -->
+    <div id="lightbox" class="modal" style="display:none;">
+        <span class="close-modal" style="color:white; font-size:3rem; right:2rem;" onclick="closeLightbox()">&times;</span>
+        <span class="lightbox-prev" onclick="prevImage(event)">&#10094;</span>
+        <img id="lightbox-img" src="" alt="">
+        <span class="lightbox-next" onclick="nextImage(event)">&#10095;</span>
+    </div>
     <!-- Impressum Modal -->
     <div id="impressumModal" class="modal">
         <div class="modal-content">
@@ -677,10 +1292,10 @@
             <h2>Impressum</h2>
             <p><strong>Stamm des Nordens</strong><br>
             vertreten durch den Generalanwalt<br>
-            stefanie s o h s t<br>
+            stefan s o h s t<br>
             Meiereistraße 5<br>
             24960 Munkbrarup</p>
-            <p><strong>Kontakt:</strong> <a href="mailto:stefanie@stammdesnordens.org">stefanie@stammdesnordens.org</a><br>
+            <p><strong>Kontakt:</strong> <a href="mailto:stefanie@stammdesnordens.org">wirsindnu@protonmail.com</a><br>
             Telegram: <a href="https://t.me/einfachsein_kanal" target="_blank">@einfachsein_kanal</a></p>
             <p><strong>Hinweis:</strong> Diese Seite dient der Information über die Nu‑Bewegung und den Stamm des Nordens. Wir verstehen uns als souveräne Gemeinschaft jenseits staatlicher Anerkennung.</p>
         </div>
@@ -691,7 +1306,7 @@
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('datenschutzModal')">&times;</span>
             <h2>Datenschutzerklärung</h2>
-            <p><strong>Verantwortlicher:</strong> stefanie s o h s t, siehe Impressum.</p>
+            <p><strong>Verantwortlicher:</strong> stefan s o h s t, siehe Impressum.</p>
             <p>Beim Besuch dieser Webseite werden keine personenbezogenen Daten gespeichert. Wir verwenden keine Cookies, keine Tracking-Tools und keine Analyse-Dienste.</p>
             <p>Bei Kontaktaufnahme per Telegram oder E-Mail werden die von dir übermittelten Daten ausschließlich zur Bearbeitung deiner Anfrage verwendet. Eine Weitergabe an Dritte erfolgt nicht.</p>
             <p><em>Stand: Februar 2026</em></p>
@@ -713,6 +1328,24 @@
     </footer>
 
     <script>
+// ----- HEADER MENÜ -----
+        function toggleMenu() {
+            const nav = document.getElementById('navLinks');
+            const icon = document.getElementById('menuIcon');
+            nav.classList.toggle('show');
+            icon.classList.toggle('active');
+            document.body.style.overflow = nav.classList.contains('show') ? 'hidden' : '';
+        }
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 768) {
+                    document.getElementById('navLinks').classList.remove('show');
+                    document.getElementById('menuIcon').classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+        });
+
         // Accordion-Funktion
         function toggleAccordion(header) {
             const accordion = header.parentNode;
@@ -734,12 +1367,15 @@
                 document.body.style.overflow = '';
             }
         }
-
-        // Mobilmenü (einfacher Hinweis)
-        document.querySelector('.menu-icon').addEventListener('click', function() {
-            alert('Bitte nutze die Links oben – eine ausführliche mobile Navigation folgt bald. Herzlich willkommen!');
+  // Leseproben-Buttons
+        document.querySelectorAll('.leseprobe-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const modalId = this.getAttribute('data-modal');
+                openModal(modalId);
+            });
         });
-
+      
         // Sanftes Scrollen
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -747,6 +1383,62 @@
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
                     target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+ // ----- LIGHTBOX -----
+        let currentImageIndex = 0;
+        const images = [
+            'images/nu1.jpg',
+            'images/nu2.jpg',
+            'images/nu3.jpg',
+            'images/tipi2.jpg',
+            'images/tipi.jpg'
+        ];
+        function openLightbox(index) {
+            currentImageIndex = index;
+            document.getElementById('lightbox-img').src = images[currentImageIndex];
+            document.getElementById('lightbox').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+            document.body.style.overflow = '';
+        }
+        function prevImage(e) {
+            e.stopPropagation();
+            currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+            document.getElementById('lightbox-img').src = images[currentImageIndex];
+        }
+        function nextImage(e) {
+            e.stopPropagation();
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            document.getElementById('lightbox-img').src = images[currentImageIndex];
+        }
+        // Tastatursteuerung für Lightbox
+        document.addEventListener('keydown', function(e) {
+            if (document.getElementById('lightbox').style.display === 'flex') {
+                if (e.key === 'ArrowLeft') prevImage(e);
+                if (e.key === 'ArrowRight') nextImage(e);
+                if (e.key === 'Escape') closeLightbox();
+            }
+        });
+
+        // Aktiven Link im Header markieren (optional)
+        window.addEventListener('scroll', function() {
+            let sections = document.querySelectorAll('section[id]');
+            let scrollY = window.pageYOffset;
+            sections.forEach(section => {
+                let sectionHeight = section.offsetHeight;
+                let sectionTop = section.offsetTop - 100;
+                let id = section.getAttribute('id');
+                if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                    document.querySelectorAll('.nav-links a').forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === '#' + id) {
+                            link.classList.add('active');
+                        }
+                    });
                 }
             });
         });
